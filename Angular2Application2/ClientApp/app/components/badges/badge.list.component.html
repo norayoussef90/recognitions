@@ -1,0 +1,6 @@
+﻿<h1>Selection Criteria</h1>
+<div *ngFor="let badge of badges">
+    <h3 id="{{ badge.id }}"> <span> {{ badge.iconUrl }} </span> {{ badge.title}} </h3>
+    <p>{{ badge.description }}</p>
+    <img src="{{ badge.imageUrl }}" />
+</div>

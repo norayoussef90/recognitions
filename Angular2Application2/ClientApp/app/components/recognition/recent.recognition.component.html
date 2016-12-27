@@ -1,0 +1,25 @@
+﻿<h1>Recognitions</h1>
+<h2>{{pageTitle}}</h2>
+
+<h3>We can't thank you enough!</h3>
+<p>
+    Your personal commitment to excellence has inspired others to push past mediocrity. 
+    They are changed because of you.
+</p>
+
+
+<h3>{{ recognitions.interval }}</h3>
+<div *ngFor="let recognition of recognitions.recognitions">
+    <img src="{{ recognition.employeePhotoUrl }}"/>
+    <h4>{{ recognition.employeeName }}</h4>
+    <h5>{{ recognition.departmentName }}</h5>
+
+    <div>
+        <h5>{{ recognition.badgeTitle }}</h5>
+        <p> {{ recognition.badgeDescription }}</p>
+    </div>
+</div>
+
+<!--<a [routerLink]="['/recognitions_history']"> See History of Reconitions </a>
+
+<badge-list></badge-list>-->

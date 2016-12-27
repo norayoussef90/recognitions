@@ -1,0 +1,28 @@
+﻿<h1>Recognitions</h1>
+<h2>{{ pageTitle }}</h2> <span>{{ fullInterval }}</span>
+
+<h3>We can't thank you enough!</h3>
+<p>
+    Your personal commitment to excellence has inspired others to push past mediocrity.
+    They are changed because of you.
+</p>
+
+<p *ngIf="!recognitions"><em>Loading...</em></p>
+
+<div *ngIf="recognitions">
+
+    <div *ngFor="let recognitionRecord in recognitions">
+        <h3>{{ recognitionRecord.interval }}</h3>
+        <div *ngFor="let recognition in recognitionRecord.recognitions">
+            <img src="{{ recognition.employeePhotoUrl }}" />
+            <h4>{{ recognition.employeeName }}</h4>
+            <h5>{{ recognition.departmentName }}</h5>
+
+            <div>
+                <h5>{{ recognition.badgeTitle }}</h5>
+                <p> {{ recognition.badgeDescription }}</p>
+            </div>
+        </div>
+    </div>
+</div>
+
